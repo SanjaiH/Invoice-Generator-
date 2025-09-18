@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Invoice</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<link rel="stylesheet" href="./style.css"/>"
+<style>
+  
+</style>
+</head>
+<body>
+  
+  <div class="invoice-box">
+    <!-- Top Banner Image -->
+    <img src="./INVOICE (5) (1) (1).png" alt="Top Banner" class="top-banner" />
+<div style="display: block;">
+    <div class="header">
+  <div class="invoice-title">INVOICE</div>
+</div>
+</div>
+<div style="display: flex;">
+<div class="section" style="font-size: 20px;">
+  <p>
+    <span class="label">Invoice to:</span>
+    <input type="text" class="value " style="color: #000000; width: 100%;" placeholder="Company Name" />
+    <input type="text" class="value" style="width: 100%;" placeholder="H-98, Grham Industrial Area-1 ,Gujrat-11200" />
+  
+  </p>
+  <p>
+    
+  </p>
+  <p>
+    <span class="label">PAN No:</span>
+    <input type="text" class="value" placeholder="XXXXXXXXXXXXXXXXX" />
+  </p>
+  <p>
+    <span class="label">GSTIN:</span>
+    <input type="text" class="value" placeholder="yyyyyyyyyyyyyyyyyyy" />
+  </p>
+  <p>
+    <span class="label">Invoice Generating Date:</span>
+    <input type="text" class="value" placeholder="20/12/2025" />
+  </p>
+</div>
+    <div class="section" style="font-size: 20px;" >
+      <p><b>Bank Details:</b> <span>HDFC Bank</span> </p>
+      <p> Account NO : 475 453 7990<br>IFSC Code: HDFC09233<br>Branch: Coimbatore </p>
+      
+
+
+    </div>
+
+    </div>
+
+<div style="padding: 12px;">
+    <table >
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Yahoo</th>
+          <th>Non Working</th>
+          <th>Total Price</th>
+        </tr>
+      </thead>
+   <tbody>
+  <tr>
+    <td><input type="tel" placeholder="2025-05-21" /></td>
+    <td><input type="text" placeholder="Account Name" /></td>
+    <td><input type="text" placeholder="Detail" /></td>
+    <td><input type="number" step="0.01" class="price" placeholder="0" /></td>
+  </tr>
+  <tr>
+    <td><input type="tel" placeholder="2025-05-21" /></td>
+    <td><input type="text" placeholder="Account Name" /></td>
+    <td><input type="text" placeholder="Detail" /></td>
+    <td><input type="number" step="0.01" class="price" placeholder="0" /></td>
+  </tr>
+  <tr>
+    <td><input type="tel" placeholder="2025-05-21" /></td>
+    <td><input type="text" placeholder="Account Name" /></td>
+    <td><input type="text" placeholder="Detail" /></td>
+    <td><input type="number" step="0.01" class="price" placeholder="0" /></td>
+  </tr>
+
+  <tr>
+    <td colspan="3" style="text-align:right;">Sub Total</td>
+    <td><input type="number" id="subtotal" step="0.01" placeholder="0.00" readonly /></td>
+  </tr>
+
+  <tr>
+    <td colspan="2" style="text-align:right;">GST %</td>
+    <td colspan="1"><input style="color: #27ae60; width: 68px; height: 18px;" type="number" id="gstPercent" step="0.01" value="0" /></td>
+    <td><input type="number" id="gstValue" step="0.01" placeholder="0" readonly /></td>
+  </tr>
+
+  <tr>
+    <td colspan="3" style="text-align:right; color: green;">Total</td>
+    <td><input type="number" id="grandTotal" step="0.01" placeholder="0" readonly /></td>
+  </tr>
+</tbody>
+
+    </table>
+    </div>
+
+
+
+  <div class="footer">
+  <div class="contact" style="font-size: 18px;">
+    <p><b>CONTACT</b><br>
+    19/A,Subbaiaiah layout<br>
+    Kamarajar road,<br>
+    uppilipalayam post,<br>
+    Coimbatore-641015</p>
+  </div>
+  <div class="sign">
+    <p><b>Mr. Chandra Kumar</b><br>CEO & Founder</p>
+  </div>
+</div>
+
+
+    <!-- Bottom Banner Image -->
+    
+  </div>
+</body>
+<div style="text-align: right; padding: 20px 30px;">
+  <button onclick="window.print()">Print</button>
+  <button onclick="downloadPDF()">Download PDF</button>
+  <button onclick="downloadExcel()">Download Excel</button>
+</div>
+
+
+<script src="./assets/index.js"></script>
+</html>
